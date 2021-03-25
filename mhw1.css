@@ -1,0 +1,227 @@
+.button a:hover {
+    background-color: red;
+    
+}
+
+body {
+    margin: 0;
+    font-size: 30px;
+    position: relative;
+}
+
+@media (max-width: 500px){
+    body {
+        font-size: 18px;
+    }
+}
+
+header {
+    position: relative;
+    top: 0;
+    width: 100%;           /*100% del Body*/
+    height: 600px;
+    background-image: url("BACKGROUND.jpg");
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Oxygen', sans-serif;
+    color: black;
+    font-size: 1em;             /*1em=30px*/
+}
+
+@media(max-width: 500px) {
+    header {
+        height: 400px;
+    }
+
+}
+
+header h1 {
+    position: relative;
+    font-size: 3em;       /*3em=3*30px=90px*/
+    z-index: 1;
+}
+
+@media(max-width: 500px){
+    header h1{
+        text-align: center;
+    }
+}
+
+#overlay {
+    background-color: rgba(0, 0, 0, .3);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+}
+
+header nav {
+    width: 60%;                     /*60% della larghezza dell'Header*/
+    height: 5%;                     /*5% dell'altezza dell'Header, cioè 0.05*600px=30px*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    position: fixed;
+    top: 20px;
+    right: 5px;
+    background-color: lightgrey;
+    border-radius: 50px;
+    font-size: 1em;                /*1em=30px*/
+    padding: 3px;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+}
+
+nav a:hover {
+    background-color: red;
+}
+
+#logo {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 25%;       /*25% dell'Header, cioè 0.25*600px=150px*/
+    width: 20%;        /*20% dell'Header*/
+}
+
+#logo img {
+    width: 100%;                       /*100% della larghezza del blocco logo*/
+    height: 100%;                      /*100% dell'altezza del blocco logo, cioè 150px*/
+}
+
+section {
+    height: 1500px;
+    width: 100%;                       /*100% della larghezza del Body*/
+    font-family: 'Abel', sans-serif;
+    font-size: 1em;                    /*1em=30px*/
+    color: rgba(9, 5, 202, 0.973);
+}
+
+div.item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25%;                   /*25% dell'altezza della section, cioè 0.25*1500px=375px*/
+    width: 100%;                   /*100% della larghezza della section*/
+    margin-top: 100px;
+    font-size: 1em;                /*1em=30px*/
+}
+
+@media(max-width: 500px){
+    div.item {
+        flex-direction: column;
+        height: 30%;
+        align-items: center;
+        justify-content: space-around;
+        margin: 10px;
+    }
+}
+
+.item div {
+    width: 45%;                 /*45% della larghezza dei blocchi div di classe item*/
+    height: 100%;               /*100% dell'altezza dei blocchi div di classe item, cioè 375px*/
+    text-align: center;
+    font-size: 1em;             /*1em=30px*/
+}
+
+@media(max-width: 500px){
+    .item div {
+        height: 40%;
+        width: 80%;
+    }
+}
+
+.item div img {
+    width: 80%;            /*80% della larghezza del div genitore*/
+    height: 65%;           /*65% dell'altezza del div genitore, cioè 0.65*375px=243.75px*/
+}
+
+@media(max-width: 500px){
+    .item div img {
+        width: 90%;
+        height: 75%;
+    }
+}
+
+.item a {
+    display: block;
+    text-decoration: none;
+    font-size: 1.75em;    /*1.75em=1.75*30px=52.5px*/
+    color:rgba(9, 5, 202, 0.973);
+    margin-bottom: 10px;
+}
+
+.item a span:hover {
+    color:red;
+}
+
+footer {
+    height: 165px;
+    width: 100%;                /*100% della larghezza del Body*/
+    background-color: black;
+    color: white;
+    font-family: 'Sine Mono', monospace;
+    font-size: .8em;            /*.8em=0.8*30px=24px*/
+    position: relative;
+}
+
+footer div.info {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+@media(max-width: 500px){
+    footer {
+        height: 100px;
+    }
+}
+
+#firma {
+    color: rgb(187, 7, 7);
+    text-align: center;
+    font-size: 1.2em;
+    position: absolute;
+    width: 100%;
+    bottom: 8px;
+    height: 25px;
+    font-style: italic;
+}
+
+#menu {
+    position: fixed;
+    top: 10px;
+    right: 15px;
+    display: none;
+    background-color: lightgrey;
+    border-radius: 5px;
+}
+
+#menu div{
+    background-color: black;
+    width: 25px;
+    height: 3px;
+    margin: 5px 0;
+}
+
+@media(max-width: 500px) {
+    header nav{
+        display: none;
+    }
+
+    #menu {
+        display: block;
+    }
+}
+
+#menu:hover {
+    background-color: red;
+}
+
